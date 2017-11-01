@@ -127,4 +127,18 @@ BOARD_HARDWARE_CLASS += \
 # Recovery
 TARGET_RECOVERY_DENSITY := hdpi
 
+# TWRP
+BOARD_HAS_NO_REAL_SDCARD := true
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+LZMA_RAMDISK_TARGETS := recovery
+RECOVERY_SDCARD_ON_DATA := true
+RECOVERY_VARIANT := twrp
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
+TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
+TW_INCLUDE_CRYPTO := true
+TW_NO_EXFAT := true
+TW_NO_EXFAT_FUSE := true
+TW_NO_USB_STORAGE := true
+TW_THEME := portrait_hdpi
+
 -include vendor/asus/flo/BoardConfigVendor.mk
